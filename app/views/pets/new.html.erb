@@ -1,0 +1,9 @@
+<h1>Register new lost pet</h1>
+
+<%= form_with model: @pet do |f| %>
+  <%= f.text_field :name %>
+  <%= f.select :species, collection: Pet::SPECIES %>
+  <%= f.text_field :address %>
+  <%= f.date_select :found_on %>
+  <%= f.submit %>
+<% end %>

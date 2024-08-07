@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="my-3" >Lost Pet's 🐶</h1>
+
+  <ul>
+    <% @pets.each do |pet| %>
+      <li> <%= link_to  pet.name, pet_path(pet) %>  .  Found <%= pet.found_days_ago %> days ago.</li>
+    <% end %>
+  </ul>
+
+  <%= link_to  "Register new lost pet",  pets_new_path %>
+</div>
